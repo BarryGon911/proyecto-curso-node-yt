@@ -23,7 +23,6 @@ const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
         next();
 
     })
-
 }
 
 router.post('/', authenticateToken, createUser)
@@ -31,6 +30,5 @@ router.get('/', authenticateToken, getAllUsers)
 router.get('/:id', authenticateToken, getUserById)
 router.put('/:id', authenticateToken, updateUser)
 router.delete('/:id', authenticateToken,deleteUser)
-
 
 export default router;

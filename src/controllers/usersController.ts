@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import { hashPassword } from "../services/password.service";
 import prisma from '../models/user'
 
-
 export const createUser = async (req: Request, res: Response): Promise<void> => {
     try {
         const { email, password } = req.body
@@ -119,5 +118,4 @@ export const deleteUser = async (req: Request, res: Response): Promise<void> => 
             res.status(500).json({ error: 'Hubo un error, pruebe más tarde' })
         }
     }
-
 }

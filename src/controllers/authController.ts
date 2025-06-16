@@ -41,7 +41,6 @@ export const register = async (req: Request, res: Response): Promise<void> => {
         res.status(500).json({ error: 'Hubo un error en el registro' })
 
     }
-
 }
 
 export const login = async (req: Request, res: Response): Promise<void> => {
@@ -77,6 +76,4 @@ export const login = async (req: Request, res: Response): Promise<void> => {
     } catch (error: any) {
         console.log('Error: ', error)
     }
-
 }
-
